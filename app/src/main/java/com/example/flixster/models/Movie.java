@@ -11,8 +11,10 @@ public class Movie {
     String posterPath;
     String title;
     String overview;
+    String backdropPath;
 
     public Movie(JSONObject jsonObject) throws JSONException {      //whoever calls this method is responsible for handling exception
+        backdropPath = jsonObject.getString("backdrop_path");
         posterPath = jsonObject.getString("poster_path");
         title = jsonObject.getString("original_title");
         overview = jsonObject.getString("overview");
@@ -23,6 +25,10 @@ public class Movie {
             movies.add(new Movie(movieJsonArray.getJSONObject(i)));
         }
         return movies;
+    }
+
+    public String getBackdropPath() {
+        return String.format("https://image.tmdb.org/t/p/w342/%s", backdropPath);
     }
 
     public String getPosterPath() { //to do this properly: 20:28 Android U Week 1
