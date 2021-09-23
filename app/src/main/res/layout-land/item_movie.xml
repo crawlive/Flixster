@@ -26,6 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_toEndOf="@+id/ivPoster"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#232323"
         android:textSize="24sp"
         tools:text="Fast Furious Presents: Hobbs  Shaw" />
 
@@ -36,6 +38,9 @@
         android:layout_below="@+id/tvTitle"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-medium"
+        android:textAlignment="textStart"
+        android:textColor="#505050"
         android:layout_toEndOf="@+id/ivPoster"
         tools:text="fdhsfhsdjlkfhsadjf ajfdh jkasdfjsdha ha jdksahfjksdha jksadhf jsdhfjksdah jklsdahf jkadsh fjaksdhfsdajkfhjkadsfhds" />
 </RelativeLayout>
