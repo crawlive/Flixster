@@ -71,7 +71,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
         TextView tvOverview;
         ImageView ivPoster;
 
-
         public ViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
             tvTitle = itemView.findViewById(R.id.tvTitle);
@@ -92,6 +91,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             else { //else url = poster img
                 imageURL = movie.getPosterPath();
             }
+            //rounded corners added
             Glide.with(context).load(imageURL).fitCenter().transform(new RoundedCornersTransformation(20,5)).into(ivPoster);
             //Register click listener on the whole row
             container.setOnClickListener(new View.OnClickListener() {
